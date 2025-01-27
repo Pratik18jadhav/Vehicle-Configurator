@@ -5,27 +5,26 @@ import java.util.List;
 
 import jakarta.persistence.*;
 
-
 @Entity
-@Table(name = "Invoice")
+@Table(name = "invoice")
 public class Invoice {
-	
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "inv_id")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "inv_id")
 	private int inv_id;
-	 @Column(name = "inv_date")
+	
+	@Column(name = "inv_date")
 	private Date inv_date;
-	
-	
-	//private int model_id;
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name = "model_id", referencedColumnName="model_id")
+
+	// private int model_id;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "model_id", referencedColumnName = "model_id")
 	private Model model;
-	
+
 	@Column(name = "component_details")
 	private List<String> component_details;
-	
+
 	public int getInv_id() {
 		return inv_id;
 	}
@@ -84,15 +83,11 @@ public class Invoice {
 
 	@Column(name = "amt")
 	private Double amt;
-	
+
 	@Column(name = "tax")
 	private Double tax;
-	
+
 	@Column(name = "total_amt")
 	private Double total_amt;
-	
-	
-	
-	
 
 }

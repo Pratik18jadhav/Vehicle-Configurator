@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Invoice_Detail")
+@Table(name = "invoice_Detail")
 public class Invoice_Detail {
 	
 	@Id 
@@ -18,13 +18,42 @@ public class Invoice_Detail {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int invDtl_id ;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "inv_id",nullable = false)
-//	Invoice invoice;
+	@ManyToOne
+	@JoinColumn(name = "inv_id",nullable = false)
+	private Invoice invoice;
 	
 	@ManyToOne
 	@JoinColumn(name = "comp_id",nullable = false)
-	Component component;
-	
+	private Component component;
 
+	public int getInvDtl_id() {
+		return invDtl_id;
+	}
+
+	public void setInvDtl_id(int invDtl_id) {
+		this.invDtl_id = invDtl_id;
+	}
+
+	public Invoice getInvoice() {
+		return invoice;
+	}
+
+	public void setInvoice(Invoice invoice) {
+		this.invoice = invoice;
+	}
+
+	public Component getComponent() {
+		return component;
+	}
+
+	public void setComponent(Component component) {
+		this.component = component;
+	}
+
+	@Override
+	public String toString() {
+		return "Invoice_Detail [invDtl_id=" + invDtl_id + ", invoice=" + invoice + ", component=" + component + "]";
+	}
+	
+	
 }
