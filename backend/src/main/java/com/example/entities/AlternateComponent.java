@@ -11,22 +11,22 @@ public class AlternateComponent {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int alt_id;
+	private int alt_id; // 
 
 	@ManyToOne
 	@JoinColumn(name = "model_id", nullable = false)
-	private int model_id;
+	private Model model_id; //
 
 	@ManyToOne
 	@JoinColumn(name = "comp_id", nullable =  false)
-	private Component comp_id;
+	private Component comp_id; //
 	
 	@ManyToOne
 	@JoinColumn(name = "alt_comp_id", nullable =  false)
-	private Component alt_comp_id;
+	private Component alt_comp_id;  //
 
 	@Column(nullable = false)
-	private double delta_price;
+	private double delta_price; //
 
 	public int getAlt_id() {
 		return alt_id;
@@ -36,11 +36,11 @@ public class AlternateComponent {
 		this.alt_id = alt_id;
 	}
 
-	public int getModel_id() {
+	public Model getModel_id() {
 		return model_id;
 	}
 
-	public void setModel_id(int model_id) {
+	public void setModel_id(Model model_id) {
 		this.model_id = model_id;
 	}
 
@@ -66,6 +66,12 @@ public class AlternateComponent {
 
 	public void setDelta_price(double delta_price) {
 		this.delta_price = delta_price;
+	}
+
+	@Override
+	public String toString() {
+		return "AlternateComponent [alt_id=" + alt_id + ", model_id=" + model_id + ", comp_id=" + comp_id
+				+ ", alt_comp_id=" + alt_comp_id + ", delta_price=" + delta_price + "]";
 	}
 
 }

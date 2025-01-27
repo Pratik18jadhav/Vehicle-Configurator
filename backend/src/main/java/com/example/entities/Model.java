@@ -8,27 +8,27 @@ public class Model {
 		
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int model_id ;
+	private int model_id ;
 	
 	@Column(nullable = false)
-	String mdl_name;
-	
-//	@ManyToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "seg_id" , referencedColumnName = "sed_id")
-//	private  Segment segment;
+	private String mdl_name;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "mfg_id" , referencedColumnName = "mfg_id")
+	@JoinColumn(name = "seg_id")
+	private  Segment segment;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "mfg_id")
 	private Manufacturer manufacturer;
 	
 	@Column(nullable = false)
-	int min_qty;
+	private int min_qty;
 	
 	@Column(nullable = false)
-	double price ;
+	private double price ;
 	
 	@Column(nullable = false)
-	String image_path;
+	private String image_path;
 
 	public int getModel_id() {
 		return model_id;
@@ -58,13 +58,13 @@ public class Model {
 		return price;
 	}
 
-//	public Segment getSegment() {
-//		return segment;
-//	}
-//
-//	public void setSegment(Segment segment) {
-//		this.segment = segment;
-//	}
+	public Segment getSegment() {
+		return segment;
+	}
+
+	public void setSegment(Segment segment) {
+		this.segment = segment;
+	}
 
 	public Manufacturer getManufacturer() {
 		return manufacturer;

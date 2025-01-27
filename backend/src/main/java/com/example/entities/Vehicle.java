@@ -11,24 +11,38 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-enum Comp_Type{
-	C,S,I,E
+enum Comp_Type {
+	C, S, I, E
 }
 
-enum Is_ConFigurable{
-	N,Y
+enum Is_Configurable {
+	N, Y
 }
+
 @Entity
 @Table(name = "Vehicle")
 public class Vehicle {
-	
-	
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name= "confi_id")
 	int confi_id;
+
+	@ManyToOne
+	@JoinColumn(name = "comp_id", nullable = false)
+	private Component component;
 	
+	@ManyToOne
+	@JoinColumn(name = "model_id")
+	private Model model ;
+
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
+	private Comp_Type comp_type;
+
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
+	private Is_Configurable is_configrable;
+
 	public int getConfi_id() {
 		return confi_id;
 	}
@@ -37,12 +51,20 @@ public class Vehicle {
 		this.confi_id = confi_id;
 	}
 
-	public char getComp_id() {
-		return comp_id;
+	public Component getComponent() {
+		return component;
 	}
 
-	public void setComp_id(char comp_id) {
-		this.comp_id = comp_id;
+	public void setComponent(Component component) {
+		this.component = component;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(Model model) {
+		this.model = model;
 	}
 
 	public Comp_Type getComp_type() {
@@ -53,44 +75,21 @@ public class Vehicle {
 		this.comp_type = comp_type;
 	}
 
-	public Is_ConFigurable getIs_configrable() {
+	public Is_Configurable getIs_configrable() {
 		return is_configrable;
 	}
 
-	public void setIs_configrable(Is_ConFigurable is_configrable) {
+	public void setIs_configrable(Is_Configurable is_configrable) {
 		this.is_configrable = is_configrable;
 	}
 
-	@ManyToOne
-  	@JoinColumn(name = "comp_id",nullable = false)
-	Component model ;
-	
-	@Column(name="comp_id" , nullable = false)
-	char comp_id;
-	
-	@Enumerated(EnumType.STRING)
-	@Column(name="comp_type", nullable = false)
-	Comp_Type comp_type;
-	
-	@Enumerated(EnumType.STRING)
-	@Column(name="is_configrable" , nullable = false)
-	Is_ConFigurable is_configrable;
+	@Override
+	public String toString() {
+		return "Vehicle [confi_id=" + confi_id + ", component=" + component + ", model=" + model + ", comp_type="
+				+ comp_type + ", is_configrable=" + is_configrable + "]";
+	}
 	
 	
-	
-	
-//	@ManyToOne
-//	@JoinColumn(name = "model_id")
-//	Model model ;
-//
-//	public Model getModel() {
-//		return model;
-//	}
-//
-//	public void setModel(Model model) {
-//		this.model = model;
-//	}
-	
-	
+
 
 }
