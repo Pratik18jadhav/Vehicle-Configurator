@@ -3,6 +3,7 @@ package com.example.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "model")
 public class Model {
 		
 	@Id
@@ -16,9 +17,9 @@ public class Model {
 //	@JoinColumn(name = "seg_id" , referencedColumnName = "sed_id")
 //	private  Segment segment;
 	
-//	@ManyToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "mfg_id" , referencedColumnName = "mfg_id")
-//	private Manufacturer manufacturer;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "mfg_id" , referencedColumnName = "mfg_id")
+	private Manufacturer manufacturer;
 	
 	@Column(nullable = false)
 	int min_qty;
@@ -57,6 +58,22 @@ public class Model {
 		return price;
 	}
 
+//	public Segment getSegment() {
+//		return segment;
+//	}
+//
+//	public void setSegment(Segment segment) {
+//		this.segment = segment;
+//	}
+
+	public Manufacturer getManufacturer() {
+		return manufacturer;
+	}
+
+	public void setManufacturer(Manufacturer manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
 	public void setPrice(double price) {
 		this.price = price;
 	}
@@ -71,9 +88,11 @@ public class Model {
 
 	@Override
 	public String toString() {
-		return "Model [model_id=" + model_id + ", mdl_name=" + mdl_name + ", min_qty=" + min_qty + ", price=" + price
-				+ ", image_path=" + image_path + "]";
+		return "Model [model_id=" + model_id + ", mdl_name=" + mdl_name + ", manufacturer=" + manufacturer
+				+ ", min_qty=" + min_qty + ", price=" + price + ", image_path=" + image_path + "]";
 	}
+
+	
 	
  	
 }

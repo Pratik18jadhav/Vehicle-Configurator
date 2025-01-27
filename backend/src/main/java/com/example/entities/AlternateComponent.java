@@ -17,14 +17,13 @@ public class AlternateComponent {
 	@JoinColumn(name = "model_id", nullable = false)
 	private int model_id;
 
-//	@ManyToOne
-//	@JoinColumn(name = "comp_id", nullable =  false)
-//	private Component comp_id;
-//	
-//	
-//	@ManyToOne
-//	@JoinColumn(name = "alt_comp_id", nullable =  false)
-//	private Component alt_comp_id;
+	@ManyToOne
+	@JoinColumn(name = "comp_id", nullable =  false)
+	private Component comp_id;
+	
+	@ManyToOne
+	@JoinColumn(name = "alt_comp_id", nullable =  false)
+	private Component alt_comp_id;
 
 	@Column(nullable = false)
 	private double delta_price;
@@ -45,21 +44,21 @@ public class AlternateComponent {
 		this.model_id = model_id;
 	}
 
-//	public Component getComp_id() {
-//		return comp_id;
-//	}
-//
-//	public void setComp_id(Component comp_id) {
-//		this.comp_id = comp_id;
-//	}
-//
-//	public Component getAlt_comp_id() {
-//		return alt_comp_id;
-//	}
-//
-//	public void setAlt_comp_id(Component alt_comp_id) {
-//		this.alt_comp_id = alt_comp_id;
-//	}
+	public Component getComp_id() {
+		return comp_id;
+	}
+
+	public void setComp_id(Component comp_id) {
+		this.comp_id = comp_id;
+	}
+
+	public Component getAlt_comp_id() {
+		return alt_comp_id;
+	}
+
+	public void setAlt_comp_id(Component alt_comp_id) {
+		this.alt_comp_id = alt_comp_id;
+	}
 
 	public double getDelta_price() {
 		return delta_price;
