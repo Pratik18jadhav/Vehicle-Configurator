@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "invoice_detail")
+@Table(name = "Invoice_Detail")
 public class Invoice_Detail {
 	
 	@Id 
@@ -20,11 +20,11 @@ public class Invoice_Detail {
 	
 //	@ManyToOne
 //	@JoinColumn(name = "inv_id",nullable = false)
-//	 private Invoice invoice;
+//	Invoice invoice;
 	
 	@ManyToOne
 	@JoinColumn(name = "comp_id",nullable = false)
-	private Component component;
+	Component component;
 	
 
 }

@@ -63,7 +63,7 @@ public class Vehicle {
 
 	@ManyToOne
   	@JoinColumn(name = "comp_id",nullable = false)
-	private Component component ;
+	Component model ;
 	
 	@Column(name="comp_id" , nullable = false)
 	char comp_id;
@@ -79,17 +79,17 @@ public class Vehicle {
 	
 	
 	
-	@ManyToOne
-	@JoinColumn(name = "model_id")
-	private Model model ;
-
-	public Model getModel() {
-		return model;
-	}
-
-	public void setModel(Model model) {
-		this.model = model;
-	}
+//	@ManyToOne
+//	@JoinColumn(name = "model_id")
+//	Model model ;
+//
+//	public Model getModel() {
+//		return model;
+//	}
+//
+//	public void setModel(Model model) {
+//		this.model = model;
+//	}
 	
 	
 
