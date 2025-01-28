@@ -193,4 +193,38 @@ public class User {
     public void setPincode(String pincode) {
         this.pincode = pincode;
     }
+
+	public User(Long userId,
+			@NotBlank @Size(min = 4, max = 50, message = "Username must be between 4 and 50 characters.") String username,
+			@NotBlank @Size(min = 8, message = "Password must be at least 8 characters long.") String password,
+			@NotBlank String authorizedPersonName, @NotBlank String designation, @NotBlank String companyName,
+			@NotBlank @Pattern(regexp = "\\d{15}", message = "GST number must be 15 digits.") String gstNumber,
+			@NotBlank @Email(message = "Please provide a valid email address.") String email,
+			@NotBlank @Pattern(regexp = "\\d{10}", message = "Contact number must be 10 digits.") String contactNumber,
+			@Pattern(regexp = "\\d{10,12}", message = "Telephone number must be between 10 to 12 digits.") String telephone,
+			@NotBlank String addressLine1, String addressLine2, @NotBlank String city, @NotBlank String state,
+			@NotBlank @Pattern(regexp = "\\d{6}", message = "Pincode must be 6 digits.") String pincode) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.password = password;
+		this.authorizedPersonName = authorizedPersonName;
+		this.designation = designation;
+		this.companyName = companyName;
+		this.gstNumber = gstNumber;
+		this.email = email;
+		this.contactNumber = contactNumber;
+		this.telephone = telephone;
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.city = city;
+		this.state = state;
+		this.pincode = pincode;
+	}
+
+	public User() {
+		super();
+	}
+    
+    
 }
