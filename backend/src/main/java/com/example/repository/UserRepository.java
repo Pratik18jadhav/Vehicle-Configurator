@@ -1,8 +1,6 @@
 package com.example.repository;
 
 import java.util.Optional;
-
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,7 +14,7 @@ import jakarta.transaction.Transactional;
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
 	
-	Optional<User> findByUsername(String username);
+	User findByUsername(String username);
 	
 	 @Query("SELECT count(u)>0 FROM User u WHERE u.username = :username AND u.password = :password")
 	 boolean validateUser(@Param("username") String username, @Param("password") String password);
