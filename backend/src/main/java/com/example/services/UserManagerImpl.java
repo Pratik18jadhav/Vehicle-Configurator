@@ -3,6 +3,7 @@ package com.example.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.entities.User;
@@ -13,19 +14,29 @@ public class UserManagerImpl implements UserManager {
 
 	@Autowired
 	private UserRepository userrepository;
+	
+	@Autowired 
+	private BCryptPasswordEncoder encoder;
 
 	public User addUser(User user) {
-		// TODO Auto-generated method stub
+		user.setPassword(encoder.encode(user.getPassword()));
 		return userrepository.save(user);
 	}
 
 	public boolean validateUser(User user) {
-
-		return userrepository.validateUser(user.getUsername(), user.getPassword());
+		
+		User existingUser = userrepository.findByUsername(user.getUsername());
+		if(existingUser != null)
+		{
+			String storepass = existingUser.getPassword();
+			return encoder.matches(user.getPassword(), storepass);
+		}
+		
+		return false;
 	}
 
 	@Override
-	public Optional<User> getUserByUsername(String username) {
+	public User getUserByUsername(String username) {
 
 		return userrepository.findByUsername(username);
 	}
