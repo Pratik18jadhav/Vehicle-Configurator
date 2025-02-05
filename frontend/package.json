@@ -12,8 +12,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.3",
-    "react-scripts": "5.0.1",
-    "proxy": "http://localhost:8080"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -21,7 +21,7 @@ public class ComponentController {
 	ComponentManager componentmanager;
 	
 	@GetMapping("/componentByCompId/{comp_id}")
-	public Optional<Component> getMethodName(@PathVariable int comp_id) {
+	public Optional<Component> componentByCompId(@PathVariable int comp_id) {
 		return componentmanager.getByComp_id(comp_id);
 	}
 	

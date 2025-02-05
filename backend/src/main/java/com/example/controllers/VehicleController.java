@@ -24,5 +24,7 @@ public class VehicleController {
 	Optional<List<Vehicle>> getVehicle(@PathVariable int compid, @PathVariable int modelid){
 		return vehiclemanager.getByComp_idAndModel_id(compid, modelid);
 	}
+	
+	
 
 }
