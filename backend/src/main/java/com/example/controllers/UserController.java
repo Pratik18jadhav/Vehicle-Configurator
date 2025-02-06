@@ -1,4 +1,5 @@
 package com.example.controllers;
+import java.io.IOException;
 import java.net.UnknownServiceException;
 import java.util.Optional;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entities.User;
 import com.example.jwt.JwtService;
+import com.example.services.InvoicePdfManager;
 import com.example.services.UserManager;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,7 +29,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin("")
 //@RequestMapping("/auth")
 public class UserController {
-
+	
 	@Autowired
 	private UserManager usermanager;
 
@@ -76,6 +78,7 @@ public class UserController {
 		Authentication authentication = authmanager
 				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 		if (authentication.isAuthenticated()) {
+			
 			return jwtService.generateToken(user.getUsername());
 		} else {
 			return "fail";

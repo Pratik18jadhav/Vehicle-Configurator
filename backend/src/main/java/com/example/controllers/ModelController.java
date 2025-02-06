@@ -21,7 +21,7 @@ public class ModelController {
 	ModelManager modelManager;
 	
 	@GetMapping(value="/modelBySegIdAndMfgId/{segid}/{mfgid}")
-	List<Integer> getModel(@PathVariable int segid,@PathVariable int mfgid){
+	List<Model> getModel(@PathVariable int segid,@PathVariable int mfgid){
 		return modelManager.findBySeg_IdAndMfg_Id(segid,mfgid);
 	}
 	

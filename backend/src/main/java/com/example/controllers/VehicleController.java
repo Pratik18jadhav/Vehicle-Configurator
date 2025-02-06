@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,9 @@ public class VehicleController {
 	@Autowired
 	VehicleManager vehiclemanager;
 	
-	@GetMapping(value = "/vehicleBycompIdAndmodelId/{compid}/{modelid}")
-	Optional<List<Vehicle>> getVehicle(@PathVariable int compid, @PathVariable int modelid){
-		return vehiclemanager.getByComp_idAndModel_id(compid, modelid);
+	@GetMapping(value = "/vehicleBymodelId/{modelid}")
+	Optional<List<Map<String, Object>>> getVehicle(@PathVariable int modelid){
+		return vehiclemanager.getByModel_id( modelid);
 	}
 	
 	
