@@ -1,6 +1,7 @@
 package com.example.services;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,9 @@ public class VehicleManagerImpl implements VehicleManager  {
 	VehicleRepository vehiclerepository;
 
 	@Override
-	public Optional<List<Vehicle>> getByComp_idAndModel_id(int comp_id, int model_id) {
+	public Optional<List<Map<String, Object>>> getByModel_id(int model_id) {
 		// TODO Auto-generated method stub
-		return vehiclerepository.getByComp_idAndModel_id(comp_id, model_id);
+		return vehiclerepository.getByModel_id( model_id);
 	}
 
 }
