@@ -97,6 +97,11 @@
     <version>9.0.0</version>
     <type>pom</type>
 </dependency>
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <scope>runtime</scope>
+		</dependency>
 
  		
 
