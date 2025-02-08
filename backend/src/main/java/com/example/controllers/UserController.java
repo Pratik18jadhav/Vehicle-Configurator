@@ -86,6 +86,9 @@ public class UserController {
 	@GetMapping(value = "/getuser/{username}")
 	public String getMethodName(@PathVariable String username) {
 		User user = usermanager.getUserByUsername(username);
+		
+		System.out.print(user);
+		
 		if (user == null) {
 			return "user not found";
 		}
