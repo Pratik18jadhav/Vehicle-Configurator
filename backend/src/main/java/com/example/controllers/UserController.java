@@ -2,7 +2,12 @@ package com.example.controllers;
 import java.io.File;
 import java.io.IOException;
 import java.net.UnknownServiceException;
-import java.util.Optional;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
+
 
 import org.hibernate.query.NativeQuery.ReturnableResultNode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +24,7 @@ import com.example.services.EmailService;
 import com.example.services.InvoicePdfManager;
 import com.example.services.UserManager;
 
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,8 +34,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@CrossOrigin("")
 //@RequestMapping("/auth")
+@CrossOrigin("http://localhost:3000")
+
 public class UserController {
 	@Autowired
 	private InvoicePdfManager invoicepdfcreater;
@@ -80,7 +87,25 @@ public class UserController {
 //
 //	}
 
+	
 	@PostMapping(value = "/login")
+
+	public ResponseEntity<Map<String, String>> login(@RequestBody User user) {
+	    Authentication authentication = authmanager.authenticate(
+	            new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+
+	    if (authentication.isAuthenticated()) {
+	        String token = jwtService.generateToken(user.getUsername());
+
+	        // Return JSON response
+	        Map<String, String> response = new HashMap<>();
+	        response.put("token", token);
+	        return ResponseEntity.ok(response);
+	    } else {
+	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+	                .body(Collections.singletonMap("error", "Invalid credentials"));
+	    }
+
 	public String login(@RequestBody User user) throws IOException {
 		
 		Authentication authentication = authmanager
@@ -94,6 +119,8 @@ public class UserController {
 		}
 
 	}
+
+
 
 	@GetMapping(value = "/getuser/{username}")
 	public String getMethodName(@PathVariable String username) {

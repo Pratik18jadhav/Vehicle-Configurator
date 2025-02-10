@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,8 @@ import com.example.services.VehicleManager;
 
 @RestController
 @RequestMapping("/api/vehicle")
+@CrossOrigin("http://localhost:3000")
+
 public class VehicleController {
 	
 	@Autowired
@@ -25,7 +28,4 @@ public class VehicleController {
 	Optional<List<Map<String, Object>>> getVehicle(@PathVariable int modelid){
 		return vehiclemanager.getByModel_id( modelid);
 	}
-	
-	
-
 }

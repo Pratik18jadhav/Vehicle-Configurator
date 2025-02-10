@@ -1,3 +1,4 @@
+
 package com.example.services;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class AlternateComponentManagerImpl implements AlternateComponentManager 
 	AlternateComponentRepository alternatecomponentrepository;
 	
 	@Override
-	public AlternateComponent findAlternateComponentbyModel_IdAndComp_Id(int comp_id, int model_id) {
+	public List<AlternateComponent> findAlternateComponentbyModel_IdAndComp_Id(int comp_id, int model_id) {
 		// TODO Auto-generated method stub
 		return alternatecomponentrepository.findAlternateComponentbyModel_idAndComp_id(comp_id,model_id);
 	}
@@ -28,3 +29,4 @@ public class AlternateComponentManagerImpl implements AlternateComponentManager 
 	}
 
 }
+

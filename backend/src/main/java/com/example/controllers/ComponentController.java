@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/component")
-@CrossOrigin("")
+
+@CrossOrigin("http://localhost:3000")
+
 public class ComponentController {
 	
 	@Autowired
