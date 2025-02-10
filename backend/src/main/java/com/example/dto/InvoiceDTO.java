@@ -2,21 +2,43 @@ package com.example.dto;
 
 import java.util.List;
 
+import jakarta.persistence.*;
+
+@Entity
 public class InvoiceDTO {
 
-	private String InvoiceNumber;
-	private String username;
-	private String manufacturer;
-	private String modelName;
-	private List<String> components;
-	private String segment;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
+	@Column(nullable = false, name = "InvoiceNumber")
+	private String InvoiceNumber;
+
+	private String username;
+
+	@Column(nullable = false)
+	private String manufacturer;
+
+	@Column(nullable = false, name = "modelName")
+	private String modelName;
+
+	@ElementCollection
+	private List<String> components;
+	@Column(nullable = false)
+	private String segment;
+	@Column(nullable = false, name = "basePrice")
 	private double basePrice;
+	@Column(nullable = false)
 	private double tax;
+	@Column(nullable = false)
 	private int quantity;
+	@Column(nullable = false, name = "totalPrice")
 	private double totalPrice;
+	@Column(nullable = false, name = "finalTotalPrice")
 	private double finalTotalPrice;
 
+	@ManyToOne
+	@JoinColumn(name = "user_name", referencedColumnName = "userName", nullable = false)
 	private UserDTO user;
 
 	public String getInvoiceNumber() {
@@ -113,6 +135,14 @@ public class InvoiceDTO {
 
 	public void setUser(UserDTO user) {
 		this.user = user;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public InvoiceDTO(String invoiceNumber, String username, String manufacturer, String modelName,
