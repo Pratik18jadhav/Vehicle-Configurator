@@ -34,7 +34,6 @@ public class InvoiceController {
 	@Autowired
 	EmailService emailservice;
 	
-	
 
 
 	@PostMapping(value = "/generateInvoice")
