@@ -9,4 +9,5 @@ import com.example.entities.Vehicle;
 public interface VehicleManager {
 	
 	Optional<List<Map<String, Object>>> getByModel_id(int model_id);
+
 }

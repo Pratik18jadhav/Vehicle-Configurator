@@ -1,3 +1,4 @@
+
 package com.example.repository;
 
 import java.util.List;
@@ -20,3 +21,6 @@ public interface AlternateComponentRepository extends JpaRepository<AlternateCom
 	List<Map<String, Object>> findbyModel_idAndAlt_comp_id (@Param("model_id") int model_id , @Param("alt_id") int alt_id);
 
 }
+
+
+

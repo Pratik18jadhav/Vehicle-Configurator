@@ -1,4 +1,6 @@
 package com.example.controllers;
+import java.io.File;
+import java.io.IOException;
 import java.net.UnknownServiceException;
 import java.util.Collections;
 import java.util.HashMap;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entities.User;
 import com.example.jwt.JwtService;
+import com.example.services.EmailService;
+import com.example.services.InvoicePdfManager;
 import com.example.services.UserManager;
 
 
@@ -34,7 +38,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin("http://localhost:3000")
 
 public class UserController {
-
+	@Autowired
+	private InvoicePdfManager invoicepdfcreater;
+	
+	@Autowired
+	private EmailService emailservice;
+	
 	@Autowired
 	private UserManager usermanager;
 
@@ -49,6 +58,7 @@ public class UserController {
 		try {
 
 			User createdUser = usermanager.addUser(user);
+			emailservice.registeredEmail(user.getEmail(), user.getCompanyName(),user.getUsername());
 			return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
 		} catch (Exception e) {
 
@@ -79,6 +89,7 @@ public class UserController {
 
 	
 	@PostMapping(value = "/login")
+
 	public ResponseEntity<Map<String, String>> login(@RequestBody User user) {
 	    Authentication authentication = authmanager.authenticate(
 	            new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
@@ -94,6 +105,19 @@ public class UserController {
 	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
 	                .body(Collections.singletonMap("error", "Invalid credentials"));
 	    }
+
+	public String login(@RequestBody User user) throws IOException {
+		
+		Authentication authentication = authmanager
+				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+		if (authentication.isAuthenticated()) {
+//			invoicepdfcreater.invoicePdf("prithvi");
+//			emailservice.invoiceEmail("ishankhekre123456@gmail.com", "SM VITA", "2456431321654", 2646.4, new File("prithvi.pdf"));
+			return jwtService.generateToken(user.getUsername());
+		} else {
+			return "fail";
+		}
+
 	}
 
 
@@ -101,6 +125,9 @@ public class UserController {
 	@GetMapping(value = "/getuser/{username}")
 	public String getMethodName(@PathVariable String username) {
 		User user = usermanager.getUserByUsername(username);
+		
+		System.out.print(user);
+		
 		if (user == null) {
 			return "user not found";
 		}

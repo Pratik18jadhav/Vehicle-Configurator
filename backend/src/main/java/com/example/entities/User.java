@@ -228,4 +228,15 @@ public class User {
 		this.pincode = pincode;
 	}
 
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password
+				+ ", authorizedPersonName=" + authorizedPersonName + ", designation=" + designation + ", companyName="
+				+ companyName + ", gstNumber=" + gstNumber + ", email=" + email + ", contactNumber=" + contactNumber
+				+ ", telephone=" + telephone + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2
+				+ ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
+	}
+	
+	
+
 }

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/component")
+
 @CrossOrigin("http://localhost:3000")
 
 public class ComponentController {
@@ -25,7 +26,7 @@ public class ComponentController {
 	ComponentManager componentmanager;
 	
 	@GetMapping("/componentByCompId/{comp_id}")
-	public Optional<Component> getMethodName(@PathVariable int comp_id) {
+	public Optional<Component> componentByCompId(@PathVariable int comp_id) {
 		return componentmanager.getByComp_id(comp_id);
 	}
 	
