@@ -16,7 +16,7 @@ public class ModelManagerImpl implements ModelManager{
 	ModelRepository modelRepository;
 
 	@Override
-	public List<Integer> findBySeg_IdAndMfg_Id(int segId, int MfgId) {
+	public List<Model> findBySeg_IdAndMfg_Id(int segId, int MfgId) {
 		// TODO Auto-generated method stub
 		 return modelRepository.findAllByMfgIdAndSegId(segId,MfgId);
 	}

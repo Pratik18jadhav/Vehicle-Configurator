@@ -51,6 +51,7 @@ public class User {
 //    @Pattern(regexp = "\\d{10}", message = "Contact number must be 10 digits.")
 	private String contactNumber; // Contact Number
 
+	@Column(nullable= true)
 //    @Pattern(regexp = "\\d{10,12}", message = "Telephone number must be between 10 to 12 digits.")
 	private String telephone; // Telephone (Optional)
 
