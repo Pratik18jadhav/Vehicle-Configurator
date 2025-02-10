@@ -105,20 +105,22 @@ public class UserController {
 	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
 	                .body(Collections.singletonMap("error", "Invalid credentials"));
 	    }
-
-	public String login(@RequestBody User user) throws IOException {
-		
-		Authentication authentication = authmanager
-				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
-		if (authentication.isAuthenticated()) {
-//			invoicepdfcreater.invoicePdf("prithvi");
-//			emailservice.invoiceEmail("ishankhekre123456@gmail.com", "SM VITA", "2456431321654", 2646.4, new File("prithvi.pdf"));
-			return jwtService.generateToken(user.getUsername());
-		} else {
-			return "fail";
-		}
-
+	    
 	}
+
+//	public String login(@RequestBody User user) throws IOException {
+//		
+//		Authentication authentication = authmanager
+//				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+//		if (authentication.isAuthenticated()) {
+////			invoicepdfcreater.invoicePdf("prithvi");
+////			emailservice.invoiceEmail("ishankhekre123456@gmail.com", "SM VITA", "2456431321654", 2646.4, new File("prithvi.pdf"));
+//			return jwtService.generateToken(user.getUsername());
+//		} else {
+//			return "fail";
+//		}
+//
+//	}
 
 
 

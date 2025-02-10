@@ -35,9 +35,7 @@ public class InvoiceController {
 	EmailService emailservice;
 	
 	
-	@PostMapping(value = "/generateInvoice")
-	public ResponseEntity<InvoiceDTO> generateInvoice(@RequestBody InvoiceDTO invoice) throws IOException
-	{
+	
 
 
 	@PostMapping(value = "/generateInvoice")
@@ -49,7 +47,12 @@ public class InvoiceController {
 		System.out.println(objDto);
 
 		
-		invoicepdfmaker.invoicePdf(objDto);
+		try {
+			invoicepdfmaker.invoicePdf(objDto);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String path = objDto.getInvoiceNumber()+".pdf";
 		emailservice.invoiceEmail("ishankhekre123456@gmail.com", objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
 
