@@ -1,6 +1,13 @@
 package com.example.controllers;
+import java.io.File;
+import java.io.IOException;
 import java.net.UnknownServiceException;
-import java.util.Optional;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
+
 
 import org.hibernate.query.NativeQuery.ReturnableResultNode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entities.User;
 import com.example.jwt.JwtService;
+import com.example.services.EmailService;
+import com.example.services.InvoicePdfManager;
 import com.example.services.UserManager;
+
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +34,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@CrossOrigin("")
 //@RequestMapping("/auth")
-public class UserController {
+@CrossOrigin("http://localhost:3000")
 
+public class UserController {
+	@Autowired
+	private InvoicePdfManager invoicepdfcreater;
+	
+	@Autowired
+	private EmailService emailservice;
+	
 	@Autowired
 	private UserManager usermanager;
 
@@ -42,6 +58,7 @@ public class UserController {
 		try {
 
 			User createdUser = usermanager.addUser(user);
+			emailservice.registeredEmail(user.getEmail(), user.getCompanyName(),user.getUsername());
 			return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
 		} catch (Exception e) {
 
@@ -70,18 +87,40 @@ public class UserController {
 //
 //	}
 
+	
 	@PostMapping(value = "/login")
-	public String login(@RequestBody User user) {
+
+	public ResponseEntity<Map<String, String>> login(@RequestBody User user) {
+	    Authentication authentication = authmanager.authenticate(
+	            new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+
+	    if (authentication.isAuthenticated()) {
+	        String token = jwtService.generateToken(user.getUsername());
+
+	        // Return JSON response
+	        Map<String, String> response = new HashMap<>();
+	        response.put("token", token);
+	        return ResponseEntity.ok(response);
+	    } else {
+	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+	                .body(Collections.singletonMap("error", "Invalid credentials"));
+	    }
+
+	public String login(@RequestBody User user) throws IOException {
 		
 		Authentication authentication = authmanager
 				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 		if (authentication.isAuthenticated()) {
+//			invoicepdfcreater.invoicePdf("prithvi");
+//			emailservice.invoiceEmail("ishankhekre123456@gmail.com", "SM VITA", "2456431321654", 2646.4, new File("prithvi.pdf"));
 			return jwtService.generateToken(user.getUsername());
 		} else {
 			return "fail";
 		}
 
 	}
+
+
 
 	@GetMapping(value = "/getuser/{username}")
 	public String getMethodName(@PathVariable String username) {

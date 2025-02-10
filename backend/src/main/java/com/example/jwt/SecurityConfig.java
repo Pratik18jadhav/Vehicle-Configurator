@@ -40,6 +40,9 @@ public class SecurityConfig {
 		http.csrf(customizer -> customizer.disable()).authorizeHttpRequests(request -> request
 //		 		.requestMatchers("/public").permitAll()
 //		 			
+
+//				.requestMatchers("/about","/login","/signup").permitAll()
+
 				.requestMatchers("/about","/login","/signup").permitAll()
 				.anyRequest().permitAll())
 				.httpBasic(Customizer.withDefaults())

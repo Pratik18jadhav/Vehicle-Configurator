@@ -1,5 +1,8 @@
 package com.example.controllers;
 
+
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.function.ObjDoubleConsumer;
 
@@ -14,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.dto.InvoiceDTO;
+import com.example.services.EmailService;
+import com.example.services.InvoicePdfManager;
 import com.example.services.InvoiceService;
 
 @RestController
@@ -22,12 +27,33 @@ public class InvoiceController {
 	@Autowired
 	private InvoiceService invoiceservice;
 
+	
+	@Autowired
+	InvoicePdfManager invoicepdfmaker;
+	
+	@Autowired
+	EmailService emailservice;
+	
+	
+	@PostMapping(value = "/generateInvoice")
+	public ResponseEntity<InvoiceDTO> generateInvoice(@RequestBody InvoiceDTO invoice) throws IOException
+	{
+
+
 	@PostMapping(value = "/generateInvoice")
 	public ResponseEntity<InvoiceDTO> generateInvoice(@RequestBody InvoiceDTO invoice) {
+
 		System.out.println(invoice);
 
 		InvoiceDTO objDto = invoiceservice.generateInvoie(invoice);
 		System.out.println(objDto);
+
+		
+		invoicepdfmaker.invoicePdf(objDto);
+		String path = objDto.getInvoiceNumber()+".pdf";
+		emailservice.invoiceEmail("ishankhekre123456@gmail.com", objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
+
+
 
 		return ResponseEntity.ok(objDto);
 	}

@@ -1,0 +1,31 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Ensure vertical alignment */
+    background-color: #333;
+    padding: 14px 20px;
+    position: fixed; /* Fixes navbar at the top */
+    top: 0;
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-right {
+    display: flex;
+}

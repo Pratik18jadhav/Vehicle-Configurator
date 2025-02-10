@@ -7,6 +7,6 @@ import com.example.entities.Model;
 
 public interface ModelManager {
 	
-	List<Integer> findBySeg_IdAndMfg_Id(int seg_id,int mfg_id);
+	List<Model> findBySeg_IdAndMfg_Id(int seg_id,int mfg_id);
 
 }
