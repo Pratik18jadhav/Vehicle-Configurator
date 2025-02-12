@@ -52,7 +52,7 @@ public class InvoiceController {
 			e.printStackTrace();
 		}
 		String path = objDto.getInvoiceNumber()+".pdf";
-		emailservice.invoiceEmail("ishankhekre123456@gmail.com", objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
+		emailservice.invoiceEmail(invoice.getUser().getEmail(), objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
 
 
 
