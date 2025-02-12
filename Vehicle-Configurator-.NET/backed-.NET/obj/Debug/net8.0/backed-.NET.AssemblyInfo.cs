@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backed-.NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77a1aad7a4f28cc60d3365defc2d6fc0e7f479d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7074847c04db1eb89dcbe80750b16724c154491")]
 [assembly: System.Reflection.AssemblyProductAttribute("backed-.NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backed-.NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

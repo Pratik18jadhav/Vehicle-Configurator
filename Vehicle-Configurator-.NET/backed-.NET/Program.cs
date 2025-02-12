@@ -1,4 +1,8 @@
 
+using backed_.NET.Repository;
+using backed_.NET.Services;
+using Microsoft.EntityFrameworkCore;
+
 namespace backed_.NET
 {
     public class Program
@@ -8,6 +12,11 @@ namespace backed_.NET
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<VconfigDbContext>(options =>
+            options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 40))));
+
+            builder.Services.AddScoped<IUserService, UserService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
