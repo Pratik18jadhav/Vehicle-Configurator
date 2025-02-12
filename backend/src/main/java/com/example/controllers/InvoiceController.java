@@ -37,8 +37,6 @@ public class InvoiceController {
 	@Autowired
 	EmailService emailservice;
 	
-	
-	
 
 
 	@PostMapping(value = "/generateInvoice")
@@ -57,9 +55,8 @@ public class InvoiceController {
 			e.printStackTrace();
 		}
 		String path = objDto.getInvoiceNumber()+".pdf";
+
 		emailservice.invoiceEmail(objDto.getUser().getEmail(), objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
-
-
 
 		return ResponseEntity.ok(objDto);
 	}
