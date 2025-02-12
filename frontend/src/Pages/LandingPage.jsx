@@ -4,6 +4,7 @@ import Hero from "../Components/Hero";
 import Features from "../Components/Features";
 import About from "../Components/About";
 import Clients from "../Components/Clients";
+import Testomonials from "../Components/Testomonials";
 import TeamMember from "../Components/TeamMember";
 import Footer from "../Components/Footer";
 
@@ -48,6 +49,9 @@ function LandingPage() {
       <Features />
       <div ref={aboutRef}>
         <About />
+      </div>
+       <div >
+        <Testomonials />
       </div>
       <div ref={servicesRef}>
         <Clients />

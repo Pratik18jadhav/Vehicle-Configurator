@@ -8,6 +8,9 @@ import bg2 from "../Content/bg2.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 import Snackbar from "@mui/material/Snackbar";
 import API from '../Service/api';
+import { toaster } from "../Service/toast";
+
+
 
 const Selection = () => {
   const location = useLocation();
@@ -115,6 +118,8 @@ const Selection = () => {
     const selectedModelObject = models.find((m) => m.id === model);
 
     if (selectedSegmentObject && selectedManufacturerObject && selectedModelObject) {
+      toaster("info", "Selection submitted successfully!");
+
       navigate("/BusinessPage", {
         state: {
           username,

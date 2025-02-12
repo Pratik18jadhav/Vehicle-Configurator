@@ -6,7 +6,9 @@ import { Modal, Box, Button, Typography, List, ListItem, ListItemText } from "@m
 import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
 import { useNavigate, useLocation } from "react-router-dom";
 import API from '../Service/api';
-import bg1 from '../Content/bg5.jpg';
+import { Fade } from "react-awesome-reveal";
+import bg1 from '../Content/bg6.jpg';
+
 
 const Business = () => {
   const navigate = useNavigate();
@@ -217,7 +219,7 @@ const ftp = totalprice * quantity;
       backgroundPosition: "center", backgroundRepeat: "no-repeat"
     }}>
       <Header />
-      <div className="part-tabs" style={{ marginTop: "80px"}}>
+      <div className="part-tabs" style={{ marginTop: "65px"}}>
         {Object.keys(parts).map((category) => (
           <button 
             key={category}
@@ -244,19 +246,21 @@ const ftp = totalprice * quantity;
           {parts[selectedPart] && parts[selectedPart].length > 0 ? (
             <List>
               {parts[selectedPart].map((partDetail, index) => (
-                <ListItem
-                  key={index}
-                  className="part-item"
-                  onClick={() => handlePartClick(partDetail)}
-                  style={{ cursor: configurableParts.includes(partDetail.comp_name) ? "pointer" : "default" }}
-                >
-                  {configurableParts.includes(partDetail.comp_name) && (
-                    <ChangeCircleIcon sx={{ color: "green", marginRight: 1 }} />
-                  )}
-                  <ListItemText
-                    primary={selectedParts[partDetail.comp_name]?.comp_name || partDetail.comp_name}
-                  />
-                </ListItem>
+               <Fade  cascade={false} delay={index * 1000} direction="up">
+               <ListItem
+                 key={index}
+                 className="part-item"
+                 onClick={() => handlePartClick(partDetail)}
+                 style={{ cursor: configurableParts.includes(partDetail.comp_name) ? "pointer" : "default" }}
+               >
+                 {configurableParts.includes(partDetail.comp_name) && (
+                   <ChangeCircleIcon sx={{ color: "green", marginRight: 1 }} />
+                 )}
+                 <ListItemText
+                   primary={selectedParts[partDetail.comp_name]?.comp_name || partDetail.comp_name}
+                 />
+               </ListItem>
+             </Fade>
               ))}
             </List>
           ) : (

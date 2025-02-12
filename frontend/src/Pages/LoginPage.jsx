@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode'; 
 import API from '../Service/api';
 import logo from '../Content/logo3.png';
+import { toaster } from "../Service/toast";
+
 
 export const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -20,6 +22,7 @@ export const LoginPage = () => {
           sessionStorage.removeItem('authToken'); // Remove expired token
           navigate('/LoginPage'); // Redirect to login
         } else {
+          
           navigate('/SelectionPage'); // Redirect to SelectionPage
         }
       } catch (err) {
@@ -48,7 +51,8 @@ export const LoginPage = () => {
   
         const extractedUsername = decoded.sub; // 🔹 Extract username from `sub`
         // sessionStorage.setItem("username", extractedUsername); // 🔹 Store username separately
-  
+        toaster("info", "Welcome,Logged in  successfully!");
+
         navigate("/SelectionPage", { state: { username: extractedUsername } });
       } else {
         setError("Invalid login response. Please try again.");

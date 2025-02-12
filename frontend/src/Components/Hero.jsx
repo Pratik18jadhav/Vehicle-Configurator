@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import HeroContent from '../Content/HeroContent3.jpg';
+import { Fade } from "react-awesome-reveal";
+
 
 const Hero = () => {
 
@@ -30,10 +32,10 @@ const Hero = () => {
         padding: 3,
       }}
     >
-      <Container>
+      <Container><Fade duration={1500}>
         <Typography variant="h1" sx={{ color : "#223747",fontWeight: 700, mb: 2 }}>
           Welcome to Vconfig
-        </Typography>
+        </Typography><Fade delay={500} cascade damping={0.3}>
         <Typography variant="h5" sx={{  fontWeight: 900, mb: 3 }}>
           Transforming your ideas into reality with cutting-edge solutions.
         </Typography>
@@ -51,7 +53,8 @@ const Hero = () => {
           href="#services"
         >
           Explore Our Services
-        </Button>
+        </Button> </Fade>
+        </Fade>
       </Container>
     </Box>
   );
