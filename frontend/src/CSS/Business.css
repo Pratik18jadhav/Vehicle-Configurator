@@ -1,12 +1,7 @@
 General Styles
-.business-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f8f9fa;
-  font-family: "Roboto", sans-serif;
+
  
-}
+
 
   
   /* Feature Toggle Bar */
@@ -46,6 +41,7 @@ General Styles
   /* Main Content */
   .main-content {
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
@@ -232,7 +228,7 @@ General Styles
 }
 
 .part-item:hover {
-  background-color: #000000;
+  background-color: #3f37d5;
 }
 
 .part-item .MuiAvatar-root {

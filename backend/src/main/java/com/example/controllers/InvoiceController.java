@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,8 @@ import com.example.services.InvoicePdfManager;
 import com.example.services.InvoiceService;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
+
 public class InvoiceController {
 
 	@Autowired
@@ -39,7 +42,7 @@ public class InvoiceController {
 	@PostMapping(value = "/generateInvoice")
 	public ResponseEntity<InvoiceDTO> generateInvoice(@RequestBody InvoiceDTO invoice) {
 
-		System.out.println(invoice);
+		System.out.println("Abcd"+invoice);
 
 		InvoiceDTO objDto = invoiceservice.generateInvoie(invoice);
 		System.out.println(objDto);
@@ -52,9 +55,8 @@ public class InvoiceController {
 			e.printStackTrace();
 		}
 		String path = objDto.getInvoiceNumber()+".pdf";
-		emailservice.invoiceEmail(invoice.getUser().getEmail(), objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
 
-
+		emailservice.invoiceEmail(objDto.getUser().getEmail(), objDto.getUser().getCompanyName(), objDto.getInvoiceNumber(), objDto.getFinalTotalPrice(), new File(path));
 
 		return ResponseEntity.ok(objDto);
 	}

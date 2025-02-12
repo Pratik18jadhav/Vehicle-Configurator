@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
+import { Slide } from "react-awesome-reveal";
+
 
 const Features = () => {
 
@@ -12,7 +14,8 @@ const Features = () => {
 
   return (
     <Box sx={{ py: 8, textAlign: 'center' }}>
-      <Container>
+      <Container>      <Slide direction="up" cascade triggerOnce>
+
         <Typography variant="h2" sx={{ mb: 4 }}>Our Features</Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
@@ -40,7 +43,8 @@ const Features = () => {
                 </Typography>
             </Paper>
           </Grid>
-        </Grid>
+        </Grid>      </Slide>
+
       </Container>
     </Box>
   );

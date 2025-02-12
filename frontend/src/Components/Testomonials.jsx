@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography , Grid} from '@mui/material';
+import { Fade } from "react-awesome-reveal";
 
 const Testomonials = () => {
 
@@ -7,7 +8,7 @@ const Testomonials = () => {
     
     return (
         <Box sx={{ py: 8, textAlign: 'center' }}>
-        <Container>
+        <Container><Fade cascade damping={0.3}>
           <Typography variant="h2" sx={{ mb: 4 }}>What Our Clients Say</Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
@@ -45,7 +46,7 @@ const Testomonials = () => {
               Michael Ondaatje, CustomRide Enterprises
               </Typography>
             </Grid>
-          </Grid>
+          </Grid></Fade>
         </Container>
       </Box>
       
