@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace backed_.NET.Models;
@@ -18,8 +19,10 @@ public partial class Segment
     public string? SegName { get; set; }
 
     [InverseProperty("Seg")]
+    [JsonIgnore]
     public virtual ICollection<Manufacturer> Manufacturers { get; set; } = new List<Manufacturer>();
 
     [InverseProperty("Seg")]
+    [JsonIgnore]
     public virtual ICollection<Model> Models { get; set; } = new List<Model>();
 }

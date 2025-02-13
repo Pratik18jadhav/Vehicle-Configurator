@@ -1,7 +1,87 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\",
   "Documents": [],
+=======
+  "WorkspaceRootPath": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\",
+  "Documents": [
+    {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\models\\alternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:models\\alternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\controllers\\alternatecomponentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:controllers\\alternatecomponentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|c:\\cdac\\v_config\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|c:\\cdac\\v_config\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|c:\\cdac\\v_config\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\alternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\alternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\ialternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\ialternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\models\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:models\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\manufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\manufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\imanufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\imanufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|d:\\cdac project\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|c:\\cdac\\v_config\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\dto\\invoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:dto\\invoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|c:\\cdac\\v_config\\vehicle-configurator\\vehicle-configurator-.net\\backed-.net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{303C3B21-2F0C-46BA-BFD2-D0A0EB52ABC6}|backed-.NET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+    }
+  ],
+>>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +89,264 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": -1,
+=======
+<<<<<<< HEAD
+          "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+<<<<<<< Updated upstream
+=======
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 1,
+              "Title": "AlternateComponent.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\AlternateComponent.cs",
+              "RelativeDocumentMoniker": "Models\\AlternateComponent.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\AlternateComponent.cs",
+              "RelativeToolTip": "Models\\AlternateComponent.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA3wDEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:17:32.4Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "Controllers\\InvoiceController.cs",
+              "ViewState": "AgIAAAoAAAAAMzMzMzMLwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:45:16.989Z",
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+<<<<<<< HEAD
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "Models\\Manufacturer.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Manufacturer.cs",
+              "RelativeToolTip": "Models\\Manufacturer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:57:15.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T10:42:31.463Z",
+=======
+              "Title": "IInvoiceService.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IInvoiceService.cs",
+              "RelativeDocumentMoniker": "Services\\IInvoiceService.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IInvoiceService.cs",
+              "RelativeToolTip": "Services\\IInvoiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:37:20.302Z",
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+<<<<<<< HEAD
+              "Title": "AlternateComponentController.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\AlternateComponentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AlternateComponentController.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\AlternateComponentController.cs",
+              "RelativeToolTip": "Controllers\\AlternateComponentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:57:46.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManufacturerController.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\ManufacturerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManufacturerController.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Controllers\\ManufacturerController.cs",
+              "RelativeToolTip": "Controllers\\ManufacturerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T10:39:30.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AlternateComponentService.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\AlternateComponentService.cs",
+              "RelativeDocumentMoniker": "Services\\AlternateComponentService.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\AlternateComponentService.cs",
+              "RelativeToolTip": "Services\\AlternateComponentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:47:05.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAlternateComponentService.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IAlternateComponentService.cs",
+              "RelativeDocumentMoniker": "Services\\IAlternateComponentService.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IAlternateComponentService.cs",
+              "RelativeToolTip": "Services\\IAlternateComponentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:40:37.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Component.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Component.cs",
+              "RelativeDocumentMoniker": "Models\\Component.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Component.cs",
+              "RelativeToolTip": "Models\\Component.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:16:57.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:58:10.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Segment.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Segment.cs",
+              "RelativeDocumentMoniker": "Models\\Segment.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Segment.cs",
+              "RelativeToolTip": "Models\\Segment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:50:53.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManufacturerService.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\ManufacturerService.cs",
+              "RelativeDocumentMoniker": "Services\\ManufacturerService.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\ManufacturerService.cs",
+              "RelativeToolTip": "Services\\ManufacturerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T10:38:23.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IManufacturerService.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IManufacturerService.cs",
+              "RelativeDocumentMoniker": "Services\\IManufacturerService.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IManufacturerService.cs",
+              "RelativeToolTip": "Services\\IManufacturerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T10:37:40.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "D:\\Cdac Project\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T10:36:47.938Z",
+=======
+              "Title": "Invoicedto.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Invoicedto.cs",
+              "RelativeDocumentMoniker": "Models\\Invoicedto.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Models\\Invoicedto.cs",
+              "RelativeToolTip": "Models\\Invoicedto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:36:58.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InvoiceService.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\InvoiceService.cs",
+              "RelativeDocumentMoniker": "Services\\InvoiceService.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Services\\InvoiceService.cs",
+              "RelativeToolTip": "Services\\InvoiceService.cs",
+              "ViewState": "AgIAAAsAAACAZmZmZmYswBQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:35:56.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceDTO.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\DTO\\InvoiceDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\InvoiceDTO.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\DTO\\InvoiceDTO.cs",
+              "RelativeToolTip": "DTO\\InvoiceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:34:26.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T05:26:04.359Z",
+>>>>>>> 486aa0f577f11fe931a4e5d2c57829dc23c42a0f
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }

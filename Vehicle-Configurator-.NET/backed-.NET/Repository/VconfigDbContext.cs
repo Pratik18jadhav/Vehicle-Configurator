@@ -25,9 +25,9 @@ public partial class VconfigDbContext : DbContext
 
     public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
-    public virtual DbSet<Invoicedto> Invoicedtos { get; set; }
+    //public virtual DbSet<Invoicedto> Invoicedtos { get; set; }
 
-    public virtual DbSet<InvoicedtoComponent> InvoicedtoComponents { get; set; }
+    //public virtual DbSet<InvoicedtoComponent> InvoicedtoComponents { get; set; }
 
     public virtual DbSet<Manufacturer> Manufacturers { get; set; }
 
@@ -37,7 +37,7 @@ public partial class VconfigDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<Userdto> Userdtos { get; set; }
+    //public virtual DbSet<Userdto> Userdtos { get; set; }
 
     public virtual DbSet<Vehicle> Vehicles { get; set; }
 
@@ -93,23 +93,23 @@ public partial class VconfigDbContext : DbContext
                 .HasConstraintName("FKckt5u57libgdv8ot4vq1o46sr");
         });
 
-        modelBuilder.Entity<Invoicedto>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+        //modelBuilder.Entity<Invoicedto>(entity =>
+        //{
+        //    entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity.HasOne(d => d.UserName1Navigation).WithMany(p => p.Invoicedtos)
-                .HasPrincipalKey(p => p.UserName)
-                .HasForeignKey(d => d.UserName1)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FKef385crv7994g0ck2v85se21p");
-        });
+        //    entity.HasOne(d => d.UserName1Navigation).WithMany(p => p.Invoicedtos)
+        //        .HasPrincipalKey(p => p.UserName)
+        //        .HasForeignKey(d => d.UserName1)
+        //        .OnDelete(DeleteBehavior.ClientSetNull)
+        //        .HasConstraintName("FKef385crv7994g0ck2v85se21p");
+        //});
 
-        modelBuilder.Entity<InvoicedtoComponent>(entity =>
-        {
-            entity.HasOne(d => d.Invoicedto).WithMany()
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK87b1mtmbi19ekbarqwuxipjqq");
-        });
+        //modelBuilder.Entity<InvoicedtoComponent>(entity =>
+        //{
+        //    entity.HasOne(d => d.Invoicedto).WithMany()
+        //        .OnDelete(DeleteBehavior.ClientSetNull)
+        //        .HasConstraintName("FK87b1mtmbi19ekbarqwuxipjqq");
+        //});
 
         modelBuilder.Entity<Manufacturer>(entity =>
         {
@@ -139,10 +139,10 @@ public partial class VconfigDbContext : DbContext
             entity.HasKey(e => e.UserId).HasName("PRIMARY");
         });
 
-        modelBuilder.Entity<Userdto>(entity =>
-        {
-            entity.HasKey(e => e.Userid).HasName("PRIMARY");
-        });
+        //modelBuilder.Entity<Userdto>(entity =>
+        //{
+        //    entity.HasKey(e => e.Userid).HasName("PRIMARY");
+        //});
 
         modelBuilder.Entity<Vehicle>(entity =>
         {

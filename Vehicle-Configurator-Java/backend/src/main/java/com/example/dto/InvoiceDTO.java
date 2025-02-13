@@ -2,6 +2,8 @@ package com.example.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class InvoiceDTO {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonIgnore
 	private long id;
 
 	@Column(nullable = false, name = "InvoiceNumber")
