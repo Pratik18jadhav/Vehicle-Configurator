@@ -1,5 +1,36 @@
 [
   {
+    "ContainingType": "backed_.NET.Controllers.AlternateComponentController",
+    "Method": "GetAlternateComponent",
+    "RelativePath": "api/AlternateComponent/alternatecompBycomp_idAndmodelId/{comp_id}/{model_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comp_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backed_.NET.Models.AlternateComponent, backed-.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "backed_.NET.Controllers.InvoiceController",
     "Method": "GenerateInvoice",
     "RelativePath": "api/Invoice/generate",
@@ -40,6 +71,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.ManufacturerController",
+    "Method": "getManufacturer",
+    "RelativePath": "api/Manufacturer/manufacturerBysegId/{segid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "segid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backed_.NET.Models.Manufacturer, backed-.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "backed_.NET.Controllers.UserController",
