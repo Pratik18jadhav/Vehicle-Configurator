@@ -13,13 +13,27 @@ namespace backed_.NET
 
             // Add services to the container.
 
+            builder.Services.AddHttpClient();
+
             builder.Services.AddDbContext<VconfigDbContext>(options =>
             options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 40))));
 
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IInvoiceService, InvoiceService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("MyAllowSpecificOrigins",
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                                  });
+            });
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -33,6 +47,8 @@ namespace backed_.NET
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("MyAllowSpecificOrigins");
 
             app.UseAuthorization();
 
