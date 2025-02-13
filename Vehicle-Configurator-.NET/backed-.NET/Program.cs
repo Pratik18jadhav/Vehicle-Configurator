@@ -20,6 +20,8 @@ namespace backed_.NET
 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IInvoiceService, InvoiceService>();
+            builder.Services.AddScoped<IAlternateComponentService, AlternateComponentService>();
+            builder.Services.AddScoped<IManufacturerService, ManufacturerService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
