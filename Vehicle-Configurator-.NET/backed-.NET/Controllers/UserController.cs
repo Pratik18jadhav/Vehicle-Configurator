@@ -2,6 +2,7 @@
 using backed_.NET.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using backed_.NET.DTO;
 
 namespace backed_.NET.Controllers
 {
@@ -32,9 +33,9 @@ namespace backed_.NET.Controllers
 
 
         [HttpPost("login")]
-        public async Task<ActionResult<User>> login([FromBody] User user)
+        public async Task<ActionResult<User>> login([FromBody] UserDto userdto)
         {
-            var existingUser = await _userService.validateUser(user.Username, user.Password);
+            var existingUser = await _userService.validateUser(userdto.Username, userdto.Password);
             if (existingUser == null)
             {
                 return Unauthorized("Invalid UserName and Password");

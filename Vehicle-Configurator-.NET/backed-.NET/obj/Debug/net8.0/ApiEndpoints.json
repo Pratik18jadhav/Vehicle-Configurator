@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "backed_.NET.Controllers.InvoiceController",
+    "Method": "GenerateInvoice",
+    "RelativePath": "api/Invoice/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoice",
+        "Type": "backed_.NET.DTO.InvoiceDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "backed_.NET.DTO.InvoiceDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.InvoiceController",
+    "Method": "GetInvoicesByUsername",
+    "RelativePath": "api/Invoice/history/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backed_.NET.Controllers.UserController",
     "Method": "GetUser",
     "RelativePath": "api/User/{username}",
@@ -34,8 +76,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "backed_.NET.Models.User",
+        "Name": "userdto",
+        "Type": "backed_.NET.DTO.UserDto",
         "IsRequired": true
       }
     ],
