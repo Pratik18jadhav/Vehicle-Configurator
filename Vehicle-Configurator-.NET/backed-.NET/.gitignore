@@ -6,6 +6,16 @@ temp/
 logs/
 *.log
 
+# Additional temp and cache files
+*.cache
+*.ilk
+*.obj
+*.pdb
+*.ipch
+*.aps
+*.pch
+
+
 # IDE files
 .vscode/
 .idea/
