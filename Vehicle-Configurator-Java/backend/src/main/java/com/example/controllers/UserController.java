@@ -35,8 +35,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 //@RequestMapping("/auth")
-@CrossOrigin("http://localhost:3000")
-
+@CrossOrigin(origins = {"http://localhost:3000", "http://165.232.182.201:5000", "http://www.vconfig.site"})
 public class UserController {
 	@Autowired
 	private InvoicePdfManager invoicepdfcreater;
