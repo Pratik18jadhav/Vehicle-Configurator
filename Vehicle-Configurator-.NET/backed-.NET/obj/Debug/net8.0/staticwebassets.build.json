@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "H9J7PBaYQA2TQ32NELbXQudaUslXRQAPs0kaQ3F9H6w=",
+  "Hash": "HpU5WuKeF0ORSznTUcRH1SFiWSDOZhcKq19G3+kWpWo=",
   "Source": "backed-.NET",
   "BasePath": "_content/backed-.NET",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "backed-.NET\\wwwroot",
+      "Source": "backed-.NET",
+      "ContentRoot": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\wwwroot\\",
+      "BasePath": "_content/backed-.NET",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\wwwroot\\EmailTemplates\\WelcomeEmailTemplate.html",
+      "SourceId": "backed-.NET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CDAC\\V_config\\Vehicle-Configurator\\Vehicle-Configurator-.NET\\backed-.NET\\wwwroot\\",
+      "BasePath": "_content/backed-.NET",
+      "RelativePath": "EmailTemplates/WelcomeEmailTemplate.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EmailTemplates\\WelcomeEmailTemplate.html"
+    }
+  ]
 }

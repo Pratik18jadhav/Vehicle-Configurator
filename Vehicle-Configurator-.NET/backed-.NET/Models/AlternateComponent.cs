@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -15,29 +16,37 @@ public partial class AlternateComponent
 {
     [Key]
     [Column("alt_id")]
+    [JsonPropertyName("alt_id")]
     public int AltId { get; set; }
 
     [Column("delta_price")]
+    [JsonPropertyName("delta_price")]
     public double DeltaPrice { get; set; }
 
     [Column("alt_comp_id")]
+    [JsonIgnore]
     public int AltCompId { get; set; }
 
     [Column("comp_id")]
+    [JsonIgnore]
     public int CompId { get; set; }
 
     [Column("model_id")]
+    [JsonIgnore]
     public int ModelId { get; set; }
 
     [ForeignKey("AltCompId")]
     [InverseProperty("AlternateComponentAltComps")]
+    [JsonPropertyName("alt_comp_id")]
     public virtual Component AltComp { get; set; } = null!;
 
     [ForeignKey("CompId")]
     [InverseProperty("AlternateComponentComps")]
+    [JsonPropertyName("comp_id")]
     public virtual Component Comp { get; set; } = null!;
 
     [ForeignKey("ModelId")]
     [InverseProperty("AlternateComponents")]
+    [JsonPropertyName("model_id")]
     public virtual Model Model { get; set; } = null!;
 }

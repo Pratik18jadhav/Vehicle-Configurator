@@ -1,11 +1,13 @@
 ﻿using backed_.NET.Models;
 using backed_.NET.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backed_.NET.Controllers
 {
     [Route("api/[controller]")]
+    [AllowAnonymous]
     [ApiController]
     public class ManufacturerController : ControllerBase
     {
