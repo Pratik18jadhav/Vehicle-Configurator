@@ -17,8 +17,7 @@ import com.example.services.VehicleManager;
 
 @RestController
 @RequestMapping("/api/vehicle")
-@CrossOrigin("http://localhost:3000")
-
+@CrossOrigin(origins = {"http://localhost:3000", "http://165.232.182.201:5000", "http://www.vconfig.site"})
 public class VehicleController {
 	
 	@Autowired
