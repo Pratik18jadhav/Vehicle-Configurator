@@ -23,8 +23,7 @@ import com.example.services.InvoicePdfManager;
 import com.example.services.InvoiceService;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
-
+@CrossOrigin(origins = {"http://localhost:3000", "http://165.232.182.201:5000", "http://www.vconfig.site"})
 public class InvoiceController {
 
 	@Autowired
