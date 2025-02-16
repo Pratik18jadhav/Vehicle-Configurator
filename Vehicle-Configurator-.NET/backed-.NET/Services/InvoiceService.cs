@@ -28,7 +28,7 @@ namespace backed_.NET.Services
             HttpResponseMessage response = await _httpClient.PostAsync(javaServiceUrl, content);
 
             if (!response.IsSuccessStatusCode)
-    {
+            {
                 throw new HttpRequestException($"Error generating invoice: {response.StatusCode}");
             }
 

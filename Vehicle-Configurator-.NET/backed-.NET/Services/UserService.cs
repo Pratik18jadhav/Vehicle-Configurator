@@ -11,10 +11,13 @@ namespace backed_.NET.Services
     {
 
         private readonly VconfigDbContext _context;
+        private readonly IEmailService _emailService;
 
-        public UserService(VconfigDbContext context)
+
+        public UserService(VconfigDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         public async Task<User?> addUser(User user)
@@ -27,6 +30,10 @@ namespace backed_.NET.Services
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+           
+
+            await _emailService.SendEmail(user.Email,user.CompanyName);
             return user;
         }
 

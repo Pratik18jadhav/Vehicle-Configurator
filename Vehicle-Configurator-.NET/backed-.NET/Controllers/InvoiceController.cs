@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace backed_.NET.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class InvoiceController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace backed_.NET.Controllers
             _invoiceService = invoiceService;
         }
 
-        [HttpGet("history/{username}")]
+        [HttpGet("/gethistory/{username}")]
         public async Task<IActionResult> GetInvoicesByUsername(string username)
         {
             try
@@ -36,7 +36,7 @@ namespace backed_.NET.Controllers
         }
 
 
-        [HttpPost("generate")]
+        [HttpPost("generateInvoice")]
         public async Task<ActionResult<InvoiceDTO>> GenerateInvoice([FromBody] InvoiceDTO invoice)
         {
             try

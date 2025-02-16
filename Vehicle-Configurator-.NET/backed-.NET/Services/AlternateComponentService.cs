@@ -14,7 +14,13 @@ namespace backed_.NET.Services
         }
         public async Task<IEnumerable<AlternateComponent>> getByModelIdandCompId(int comp_id,int model_id)
         {
-            return await dbContext.AlternateComponents.Where(m=> m.ModelId == model_id && m.CompId == comp_id).ToListAsync();
+            return await dbContext.AlternateComponents.Where(m=> m.ModelId == model_id && m.CompId == comp_id)
+                .Include(m => m.Model)
+                .ThenInclude(m => m.Mfg)
+                .ThenInclude(m => m.Seg)
+                .Include(m => m.Comp)
+                .Include(a => a.AltComp)
+                .ToListAsync();
         }
     }
 }

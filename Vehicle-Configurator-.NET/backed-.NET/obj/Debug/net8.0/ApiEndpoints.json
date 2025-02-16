@@ -2,7 +2,7 @@
   {
     "ContainingType": "backed_.NET.Controllers.AlternateComponentController",
     "Method": "GetAlternateComponent",
-    "RelativePath": "api/AlternateComponent/alternatecompBycomp_idAndmodelId/{comp_id}/{model_id}",
+    "RelativePath": "alternatecompBycomp_idAndmodelId/{comp_id}/{model_id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -31,48 +31,6 @@
     ]
   },
   {
-    "ContainingType": "backed_.NET.Controllers.InvoiceController",
-    "Method": "GenerateInvoice",
-    "RelativePath": "api/Invoice/generate",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "invoice",
-        "Type": "backed_.NET.DTO.InvoiceDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "backed_.NET.DTO.InvoiceDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backed_.NET.Controllers.InvoiceController",
-    "Method": "GetInvoicesByUsername",
-    "RelativePath": "api/Invoice/history/{username}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "backed_.NET.Controllers.ManufacturerController",
     "Method": "getManufacturer",
     "RelativePath": "api/Manufacturer/manufacturerBysegId/{segid}",
@@ -99,9 +57,108 @@
     ]
   },
   {
+    "ContainingType": "backed_.NET.Controllers.ModelController",
+    "Method": "GetModelBySegIdAndMfgId",
+    "RelativePath": "api/model/modelBySegIdAndMfgId/{segid}/{mfgid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "segid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mfgid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.SegmentController",
+    "Method": "GetAll",
+    "RelativePath": "api/segment/segments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backed_.NET.Models.Segment, backed-.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.VehicleController",
+    "Method": "GetByModelId",
+    "RelativePath": "api/vehicle/vehicleBymodelId/{modelid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modelid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.InvoiceController",
+    "Method": "GenerateInvoice",
+    "RelativePath": "generateInvoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoice",
+        "Type": "backed_.NET.DTO.InvoiceDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "backed_.NET.DTO.InvoiceDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backed_.NET.Controllers.InvoiceController",
+    "Method": "GetInvoicesByUsername",
+    "RelativePath": "gethistory/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backed_.NET.Controllers.UserController",
     "Method": "GetUser",
-    "RelativePath": "api/User/{username}",
+    "RelativePath": "getuser/{username}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -127,7 +184,7 @@
   {
     "ContainingType": "backed_.NET.Controllers.UserController",
     "Method": "login",
-    "RelativePath": "api/User/login",
+    "RelativePath": "login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -140,7 +197,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "backed_.NET.Models.User",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -153,7 +210,7 @@
   {
     "ContainingType": "backed_.NET.Controllers.UserController",
     "Method": "registerCompany",
-    "RelativePath": "api/User/signup",
+    "RelativePath": "signup",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
